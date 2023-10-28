@@ -78,25 +78,25 @@ data class Formacao(val nome: String, var inicio: String, var conteudos: List<Co
 
 fun main() {
     var atividade1 = Atividade("Apresentacao e objetivos", Nivel.BASICO, TipoAtividade.AULA)
-    atividade1.instrutor = "Grace Muller"
-    atividade1.stack = "Java"
-    var atividade2 = Atividade("Introducao ao Javascript", Nivel.BASICO, TipoAtividade.AULA)
-    atividade2.instrutor = "Natalia Kim"
+    atividade1.instrutor = "Gomes Adams"
+    atividade1.stack = "Kotlin"
+    var atividade2 = Atividade("Introducao ao Kotlin", Nivel.BASICO, TipoAtividade.AULA)
+    atividade2.instrutor = "Julia Gommes"
     atividade2.stack = "Kotlin"
     var atividade3 = Atividade("Materiais de apoio", Nivel.BASICO, TipoAtividade.MATERIAL)
     var atividade4 = Atividade("Certify your knowledge", Nivel.BASICO, TipoAtividade.TESTE)
-    atividade4.duracao = 17
-    var atividade5 = Atividade("Conhecendo o Noode.js e sua documentacao oficial", Nivel.BASICO, duracao=60)
+    atividade4.duracao = 18
+    var atividade5 = Atividade("Conhecendo o Javascript e sua documentacao oficial", Nivel.BASICO, duracao=60)
     var atividade6 = Atividade("Introducao pratica a linguagem de programacao Kotlin", Nivel.BASICO, duracao=120)
-    var atividade7 = Atividade("Poo C#", Nivel.DIFICIL, TipoAtividade.AULA, Acesso.TOP)
-    atividade7.duracao = 88
-    atividade7.stack = "Kotlin"
+    var atividade7 = Atividade("Tecnicas avancadas em Nodejs", Nivel.DIFICIL, TipoAtividade.AULA, Acesso.TOP)
+    atividade7.duracao = 110
+    atividade7.stack = "Javascript"
 
     var conteudo1 = ConteudoEducacional("Dominando a linguagem de programacao Kotlin")
-    var conteudo2 = ConteudoEducacional("Variáveis em java")
+    var conteudo2 = ConteudoEducacional("POO")
 
-    var formacao1 = Formacao("Kotlin Experience", "01/09/2023")
-    var formacao2 = Formacao("Java Developer", "02/02/2023")
+    var formacao1 = Formacao("Kotlin Experience", "01/02/2023")
+    var formacao2 = Formacao("C# Developer", "02/10/2023")
 
     atividade1.pai = 5
     atividade2.pai = 5
@@ -112,11 +112,11 @@ fun main() {
 
     formacao1.conteudos = listOf(conteudo1, conteudo2)
 
-    var conteudo3 = ConteudoEducacional("Array e listas em Python")
-    var atividade8 = Atividade("Dominando IDEs Java", Nivel.INTERMEDIARIO, duracao=240)
-    var atividade9 = Atividade("Sintaxe", Nivel.BASICO, duracao=120)
-    var atividade10 = Atividade("Conceituacao de metodos", Nivel.BASICO, TipoAtividade.AULA, Acesso.FREE)
-    atividade10.instrutor = "Gary Daniles"
+    var conteudo3 = ConteudoEducacional("Dominando a Linguagem de Programacao Java")
+    var atividade8 = Atividade("Dominando IDEs Java", Nivel.INTERMEDIARIO, duracao=49)
+    var atividade9 = Atividade("Entendendo metodos Java", Nivel.BASICO, duracao=89)
+    var atividade10 = Atividade("Typescript", Nivel.BASICO, TipoAtividade.AULA, Acesso.FREE)
+    atividade10.instrutor = "Tex Ranger"
     atividade10.stack = "Java"
     atividade10.pai = 9
     conteudo3.adicionarAtividade(atividade8)
@@ -124,10 +124,10 @@ fun main() {
     conteudo3.adicionarAtividade(atividade10)
     formacao2.conteudos = listOf(conteudo3)
 
-    formacao1.matricular(Usuario("Luisa Lima ", LocalDate.of(1999, 10, 02), "LL"))
-    formacao1.matricular(Usuario("Joe Klose", LocalDate.of(2000, 6, 18), "J"))
-    formacao1.matricular(Usuario("Mila Novack", LocalDate.of(2003, 9, 21), "L"))
-    formacao1.matricular(Usuario("Jane Guiler", LocalDate.of(1999, 3, 31), "JG"))
+    formacao1.matricular(Usuario("Gomes Adams", LocalDate.of(1987, 10, 27), "Adams"))
+    formacao1.matricular(Usuario("Livia Hendrix", LocalDate.of(2000, 6, 18), "LH"))
+    formacao1.matricular(Usuario("Kim Kalstrom", LocalDate.of(1999, 9, 23), "K"))
+    formacao1.matricular(Usuario("Max Teser", LocalDate.of(1995, 3, 21), "T"))
 
     formacao1.showTree()
 
